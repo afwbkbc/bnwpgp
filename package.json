@@ -1,0 +1,23 @@
+{
+  "name": "bnwpgp",
+  "version": "1.0.0",
+  "description": "Lightweight command line tool to post PGP-signed messages to bnw.im",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afwbkbc/bnwpgp.git"
+  },
+  "author": "afwbkbc",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/afwbkbc/bnwpgp/issues"
+  },
+  "homepage": "https://github.com/afwbkbc/bnwpgp#readme",
+  "dependencies": {
+    "node-gpg": "^0.2.0",
+    "node-xmpp": "^1.1.0"
+  }
+}
