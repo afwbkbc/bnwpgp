@@ -12,7 +12,7 @@ class PGP extends require( './_Module' ) {
 		if ( data.postid )
 			toenc += 'Reply to ' + data.postid + '\n';
 		
-		toenc += '\n' + data.text.trim() + '\n\n';
+		toenc += '\n' + data.text.trim() + '\n\n\* posted with bnwpgp ( https://github.com/afwbkbc/bnwpgp )\n';
 		
 		var t = this.gpg.sign( toenc, uid ).then( ( result ) => {
 			this.emit( 'signed', result );
