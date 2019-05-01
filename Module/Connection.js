@@ -36,7 +36,11 @@ class Connection extends require( './_Module' ) {
 	}
 
 	Post( data ) {
-		this._Send( data[ 'text' ] );
+		var str = '';
+		if ( data.tags )
+			data.tags.split( ',' ).forEach( tag => str += '*' + tag + ' ' );
+		str += data.text;
+		this._Send( str );
 	}
 	
 	Comment( data ) {

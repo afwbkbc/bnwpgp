@@ -20,6 +20,14 @@ class Engine {
 		if ( o.data.postid && o.data.postid[ 0 ] != '#' )
 			o.data.postid = '#' + o.data.postid;
 		
+		if ( o.data.text[ 0 ] == '*' ) {
+			var pos = o.data.text.indexOf( ' ' );
+			if ( pos >= 0 ) {
+				o.data.tags = o.data.text.substring( 1, pos );
+				o.data.text = o.data.text.substring( pos + 1 );
+			}
+		}
+		
 		var exit_handler = ( message ) => {
 			console.log( message );
 			process.exit();
